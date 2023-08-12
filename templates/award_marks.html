@@ -1,0 +1,39 @@
+
+{% load static %}
+<!DOCTYPE html>
+    <html>
+        <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'marks.css' %}">
+    <title>My Tasks</title>    
+    </head>
+
+        <body>
+            <h1>Award Marks</h1>
+            <a href="http://127.0.0.1:8000/admin_task/" style="margin-left:20%;text-decoration:none;font-weight:bold;font-size:large;">Back</a>
+            <form action="add" method="post">
+                <label for="id_Student">Student  {{forms.Student}} </label><br><br>
+
+                <label for="id_Class">Class  {{forms.Class}} </label><br><br>
+                
+                <label for="id_ClassBlock" >Admission {{forms.Admission}} </label><br><br>
+                
+                <label for="id_EnglishScore" name="num1">English score  {{forms.EnglishScore}} </label><br><br>
+                
+                <label for="id_MathsScore" name="num2">Maths score  {{forms.MathsScore}} </label><br><br>
+                
+                <label for="id_ScienceScore" name="num3">Science score  {{forms.ScienceScore}}</label><br><br>
+                
+                <label for="id_KiswahiliScore" name="num4">Kiswahili score  {{forms.KiswahiliScore}} </label><br><br>
+                
+                <label for="id_SSCREScore" name="num5">S/S & CRE score {{forms.SSCREScore}} </label><br><br>
+
+                <button type="submit" style="text-align:center;">Add Total</button><br><br>
+
+                <label for="TotalScore">Total Score {{result}}</label><br><br>
+       
+                {% csrf_token %}
+                <button type="submit">Submit</button>
+
+            </form>
+        </body>
+    </html>

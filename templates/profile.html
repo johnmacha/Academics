@@ -1,0 +1,28 @@
+
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'profile.css' %}">
+    <title>Valley Crest Portal</title>
+</head>
+<body>
+
+    <a href="http://127.0.0.1:8000/tasks/">Back</a>
+
+    <div class="container">
+
+        <h2>Hola {{user.username}}</h2><br>
+     {% for detail in details %}
+    <img src="{{detail.img.url}}" alt="Upload your Avatar" ><br>
+    <h3 style="font-family:sans-serif;color: brown;">Bio:</h3>
+    <h3>{{detail.desc}}</h3>
+    {% endfor %}
+    <a href="http://127.0.0.1:8000/profile1/">Edit your profile</a>
+
+    </div>
+  
+</body>
+</html>

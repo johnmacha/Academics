@@ -1,0 +1,30 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'profile1.css' %}">
+    <title>Valley Crest Portal</title>
+</head>
+<body>
+ <a href="http://127.0.0.1:8000/profile/">Back</a>
+
+    <form method="POST" action="" >
+    <p>
+        <label for="id_img">Image</label>
+        <input type="file" name="img" accept="image/*" required id="id_img">
+    </p>
+    <p>
+    
+    <label for="id_desc">Description </label>
+    <textarea name="desc" cols="40" rows="10" required id="id_desc">
+    </textarea>
+    </p>
+    {% csrf_token %}
+    <button type="submit">Upload</button>
+   
+    </form>
+
+</body>
+</html>

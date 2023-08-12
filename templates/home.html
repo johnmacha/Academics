@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+        <meta charset="UTF-8">
+        <title>Home page</title>
+    </head>
+    <body>
+
+        <div class ="navbar">
+        <h1 style="text-align:center;">Welcome To Valley Crest Academy Portal</h1>
+
+        <div class="academics">
+
+        <a href="http://127.0.0.1:8000/main/" style="font-family:sans-serif;">ACADEMICS</a>
+        </div>
+
+        <div class="admin">
+        <a href="http://127.0.0.1:8000/admins/" style="font-family:sans-serif;">ADMIN</a>
+        </div>
+
+        </div>
+        
+        <div class="section1">
+            <section>
+            <img src="{% static 'academics3.jpeg' %}" alt="there was supposed to be an image here"></img>
+            </section>
+            <h3>ACADEMICS</h3>
+
+        </div>
+
+        <div class="section2">
+            <section>
+            <img src="{% static 'academics4.jpeg' %}">
+            </section>
+            <h3>CLASSES</h3>
+
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+        <link rel="" type="" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css' %}">
+    </head>
+    <img src="{% static 'valley_logo.png' %}" style="align-items:center;">
+
+    <body>
+        <div class="navbar" id="bar">
+
+                {% if user.is_authenticated %}
+                <h3 style="color:wheat; padding-left:30px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">  Hallo {{user.username}}</h3>
+                <a class="logout" href="http://127.0.0.1:8000/accounts/logout" style="color:magenta;">LOGOUT</a>
+
+                {% endif %}
+                      
+                <a class="home" href="http://127.0.0.1:8000/">HOME</a>
+                <a class="contact" href="#foot">CONTACT</a>
+                <a class="about" href="#segundo">ABOUT</a>
+                <a class="tasks" href="http://127.0.0.1:8000/tasks/">MY TASKS</a> 
+        
+        </div>
+
+       
+        <script type="text/javascript">
+            //when the user scrolls the page, execute myFunction 
+            window.onscroll = function() {myFunction()};
+
+            //Get the navbar
+            var navbar = getElementById('bar');
+
+            //Get the offset position of the navbar
+            var sticky = navbar.offsetTop;
+
+            //Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+            function myFunction(){
+                if (window.pageYOffset >= sticky){
+                    navbar.classList.add("sticky")
+                }
+                else{
+                    navbar.classList.remove("sticky");
+                }
+                }
+            
+         </script>
+
+        <div class="scroll">
+            <img src="{% static 'arrow2.png' %}">
+            </div>
+        
+         <script type="text/javascript">
+          const scroll = document.querySelector(".scroll");
+          scroll.addEventListener('click', function(){
+            window.scrollTo(0,0);
+          });
+          document.getElementById('remove').onclick('newFunction()');
+
+         </script>
+
+
+        <div class="first">
+        <section id="primero">
+            <h1>How Can We Help You?</h1>
+          <!-- <img src="{% static 'academics1.jpg' %}"></img> -->
+        </section>
+        </div>
+
+        <div  class="second">
+        <section id="segundo">
+            <h1>ABOUT US</h1>
+            <p1>Our Vision is to become the preferred School of choice in the use of modern technologies in the delivery of quality education, training and professional development.
+                Our Mission is to enhance the quality of higher education through flexible models of delivery and modern technology, for individual and society development.
+            </p1>
+        </section>
+    </div>
+    </body>
+
+    <footer class="footer" id="foot">
+        <div class="container">
+            <div class="row">
+            
+            <div class="footer-col">
+                <h4>Institution</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">our services</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                    <li><a href="#">affiliate program</a></li>
+
+                </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">payment options</a></li>
+
+                    
+                    </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Contacts</h4>
+                        <ul>
+                            <li><a href="">0791285291</a></li>
+                            <li><a href="">0705688859</a></li>
+
+                        </ul>
+                        </div>
+
+                        <div class="footer-col">
+                            <h4>Follow us</h4>
+                            <ul>
+                                <li><a href="#"><i class="fab fa-twitter">twitter</i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram">instagram</i></a></li>
+                                <li><a href="#"><i class="fab fa-whatsapp">whatsapp</i></a></li>   
+                                </ul>
+                            </div>
+        </div>
+    
+    </footer>
+</html>

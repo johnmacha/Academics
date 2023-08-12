@@ -1,0 +1,43 @@
+
+*{
+background-color:brown;
+}
+h1{
+    text-align: center;
+    color: grey;
+    font-family:sans-serif;
+}
+
+form{
+    text-align:center;
+    font-weight: 700;
+    font-size: large;
+    font-family: sans-serif;
+}
+input{
+    background-color: white;
+    height: 25px;
+    border-radius:25px;
+}
+button{
+    background-color:magenta;
+    border-radius: 25px;
+    font-weight: bold; 
+    height: 30px;
+    font-size: large;
+    font-family: sans-serif;
+
+}
+button:hover{
+cursor: pointer;
+background-color:grey; 
+color:green;
+}
+
+body a{
+    outline:none;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:large;
+}
+

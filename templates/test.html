@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+
+    </head>
+    <img src="{% static 'valley_logo.png' %}" style="align-items:center; background-color:wheat; border-radius:50%;">
+
+    <body>
+        <div class="navbar">
+
+                {% if user.is_authenticated %}
+                <h3 style="color:wheat;">  Hallo {{user.username}}</h3>
+                <a class="logout" href="http://127.0.0.1:8000/accounts/login" style="color:magenta;">LOGOUT</a>
+
+                {% endif %}
+                      
+                <a class="home" href="http://127.0.0.1:8000/">HOME</a>
+                <a class="contact" href="">CONTACT</a>
+                <a class="about" href="">ABOUT</a> 
+        
+        </div>
+
+        <div class="first">
+        <section id="primero" >
+            <p style="background-image:url('academics2.jpg')">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod non vel facere eligendi, dolore amet deleniti. Debitis, pariatur repudiandae delectus optio dolorum tempora totam modi impedit blanditiis quia. Sapiente, provident?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod non vel facere eligendi, dolore amet deleniti. Debitis, pariatur repudiandae delectus optio dolorum tempora totam modi impedit blanditiis quia. Sapiente, provident?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod non vel facere eligendi, dolore amet deleniti. Debitis, pariatur repudiandae delectus optio dolorum tempora totam modi impedit blanditiis quia. Sapiente, provident?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod non vel facere eligendi, dolore amet deleniti. Debitis, pariatur repudiandae delectus optio dolorum tempora totam modi impedit blanditiis quia. Sapiente, provident?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod non vel facere eligendi, dolore amet deleniti. Debitis, pariatur repudiandae delectus optio dolorum tempora totam modi impedit blanditiis quia. Sapiente, provident?
+            </p>
+        </section>
+        </div>
+
+        <div  class="second">
+        <section id="segundo">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod non vel facere eligendi, dolore amet deleniti. Debitis, pariatur repudiandae delectus optio dolorum tempora totam modi impedit blanditiis quia. Sapiente, provident?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod non vel facere eligendi, dolore amet deleniti. Debitis, pariatur repudiandae delectus optio dolorum tempora totam modi impedit blanditiis quia. Sapiente, provident?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod non vel facere eligendi, dolore amet deleniti. Debitis, pariatur repudiandae delectus optio dolorum tempora totam modi impedit blanditiis quia. Sapiente, provident?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod non vel facere eligendi, dolore amet deleniti. Debitis, pariatur repudiandae delectus optio dolorum tempora totam modi impedit blanditiis quia. Sapiente, provident?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod non vel facere eligendi, dolore amet deleniti. Debitis, pariatur repudiandae delectus optio dolorum tempora totam modi impedit blanditiis quia. Sapiente, provident?        </section>
+        </div>
+    </div>
+    </body>
+</html>

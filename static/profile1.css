@@ -1,0 +1,14 @@
+
+body{
+    text-align: center;
+    margin-top: 50px;
+}
+
+text-area{
+    color:white;
+}
+
+body a{
+    outline:none;
+    text-decoration:none;
+}

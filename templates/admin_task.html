@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+    <html>
+        <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'tasks.css' %}">
+    <title>Tasks</title>    
+    </head>
+
+        <body>
+            <div class="sidebar active" >
+                <div class="toggle-btn">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+           
+                </div>
+           
+                <div class="sidebar-brand">
+                   <h1><span class="valley"><img style="width:45px;height:45px;margin-left:10px;" src="{% static 'tasks2.png' %} "></span>Tasks</h1>
+               </div>
+           
+               <div class="links">
+                <a href="http://127.0.0.1:8000/admin1/"> <img src="{% static 'back2.png' %}">
+                    Back</a>
+
+                   <!-- <a href="http://127.0.0.1:8000/"> <img src="{% static 'register2.png' %}">
+                      Subjects Registration </a> -->
+           
+                   <a href="http://127.0.0.1:8000/marks/" class="active"> <img src="{% static 'register2.png' %}">
+                    Award marks</a>
+           
+                   <a href=""><img src="{% static 'transcript2.png' %}">
+                    View Student Marks</a>
+                      
+               </div>
+               </div>
+               <img src="{% static 'admin_img.png' %}" style="width:100%;height:100%;">
+                 
+               <script type="text/javascript">
+                document.querySelector(".sidebar .toggle-btn").addEventListener("click", function(){
+                document.querySelector(".sidebar").classList.toggle("active");
+                });
+               </script>
+        </body>
+    </html>
